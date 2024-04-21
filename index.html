@@ -9,7 +9,7 @@ smartech('identify', 'mobile');
 </script>      
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple web</title>
+<title>Simple web1</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -66,7 +66,7 @@ smartech('identify', 'mobile');
 
 <div class="container">
   <h1>Welcome to Shikha's Website</h1>
-  <button class="button">Button 1</button>
+  <button class="button" onclick="collectUserData()"> LOGIN </button>
   <button class="button">Button 2</button>
   <button class="button">Button 3</button>
   <button class="button">Button 4</button>
@@ -87,6 +87,25 @@ smartech('identify', 'mobile');
   }
 
   setInterval(nextSlide, 3000); // Rotate every 3 seconds
+
+  // Function to collect user data when Button 1 is clicked
+  function collectUserData() {
+    const email = prompt('Please enter your email:');
+    const id = prompt('Please enter your ID:');
+    const phone = prompt('Please enter your phone number:');
+    
+    // Send the collected data to your server or perform any necessary actions
+    // For demonstration purposes, we'll log the data to the console
+    console.log('Email:', email);
+    console.log('ID:', id);
+    console.log('Phone:', phone);
+
+smartech('contact', 'LIST IDENTIFIER', {
+'pk^customerid': id,
+'email':email,
+'mobile': phone
+});
+  }
 </script>
 
 </body>
