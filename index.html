@@ -9,7 +9,7 @@ smartech('identify', 'mobile');
 </script>      
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple web1</title>
+<title>Simple web 2</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -91,17 +91,15 @@ smartech('identify', 'mobile');
   // Function to collect user data when Button 1 is clicked
   function collectUserData() {
     const email = prompt('Please enter your email:');
-    const id = prompt('Please enter your ID:');
     const phone = prompt('Please enter your phone number:');
     
     // Send the collected data to your server or perform any necessary actions
     // For demonstration purposes, we'll log the data to the console
     console.log('Email:', email);
-    console.log('ID:', id);
     console.log('Phone:', phone);
 
-smartech('contact', 'LIST IDENTIFIER', {
-'pk^customerid': id,
+smartech('contact', '447', {
+
 'email':email,
 'mobile': phone
 });
