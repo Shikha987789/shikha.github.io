@@ -9,7 +9,7 @@ smartech('identify', 'mobile');
 </script>      
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple web 2</title>
+<title>Simple web 3</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -89,7 +89,7 @@ smartech('identify', 'mobile');
   setInterval(nextSlide, 3000); // Rotate every 3 seconds
 
   // Function to collect user data when Button 1 is clicked
-  function collectUserData() {
+  function collectUserData() 
     const email = prompt('Please enter your email:');
     const phone = prompt('Please enter your phone number:');
     
@@ -98,11 +98,16 @@ smartech('identify', 'mobile');
     console.log('Email:', email);
     console.log('Phone:', phone);
 
-smartech('contact', '447', {
+smartech('dispatch', 'Login', {
+    'email': email,
+    'phone': phone
+});
 
+smartech('contact', '447', {
 'email':email,
 'mobile': phone
 });
+
   }
 </script>
 
