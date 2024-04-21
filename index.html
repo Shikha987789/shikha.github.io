@@ -10,7 +10,7 @@ smartech('dispatch','page browse',{});
 </script>      
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple web 7</title>
+<title>Simple web 8</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -68,7 +68,7 @@ smartech('dispatch','page browse',{});
 <div class="container">
   <h1>Welcome to Shikha's Website</h1>
   <button class="button" onclick="collectUserData()"> LOGIN </button>
-  <button class="button">Button 2</button>
+  <button class="button" onclick="trackevent()"> EVENT </button>
   <button class="button">Button 3</button>
   <button class="button">Button 4</button>
   <button class="button">Button 5</button>
@@ -114,6 +114,12 @@ smartech('contact',447, {
    //  'pk^mobile': phone
    //  });
   }
+
+function trackevent(){
+smartech('dispatch','page browse',{});
+smartech('dispatch','1',{});
+}
+
 </script>
 
 </body>
