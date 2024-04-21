@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Website with Buttons and Carousel</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .carousel {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap; /* Prevent images from wrapping */
+  }
+
+  .carousel img {
+    width: 100%;
+    display: inline-block; /* Display images side by side */
+    vertical-align: top; /* Align images to the top */
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="carousel">
+  <img src="https://webneel.com/daily/sites/default/files/images/daily/08-2018/1-nature-photography-spring-season-mumtazshamsee.jpg" alt="Image 1">
+  <img src="https://assets.hongkiat.com/uploads/nature-photography/nature-photography-mountain-sky.jpg" alt="Image 2">
+  <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg" alt="Image 3">
+</div>
+
+<div class="container">
+  <h1>Welcome to Shikha's Website</h1>
+  <button class="button">Button 1</button>
+  <button class="button">Button 2</button>
+  <button class="button">Button 3</button>
+  <button class="button">Button 4</button>
+  <button class="button">Button 5</button>
+</div>
+
+<script>
+  // JavaScript for carousel functionality
+  const carousel = document.querySelector('.carousel');
+  const slides = carousel.querySelectorAll('img');
+  const totalSlides = slides.length;
+  let currentSlide = 0;
+
+  function nextSlide() {
+    slides[currentSlide].style.display = 'none';
+    currentSlide = (currentSlide + 1) % totalSlides;
+    slides[currentSlide].style.display = 'inline-block';
+  }
+
+  setInterval(nextSlide, 3000); // Rotate every 3 seconds
+</script>
+
+</body>
+</html>
