@@ -119,11 +119,12 @@ smartech('contact',447, {
 
 function trackevent(){
 console.log("Dispatching page browse event...");
-  smartech('dispatch', 'page browse', {});
+  smartech('dispatch', 'page browse', []);
   console.log("Dispatching event 1...");
-  smartech('dispatch', '1', {});
+  smartech('dispatch', '1', []);
   console.log("Dispatching Add To Cart event...");
-  smartech('dispatch', 'Add To Cart', {});
+  smartech('dispatch', 'Add To Cart', []);
+
 }
 
 </script>
