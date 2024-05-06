@@ -3,14 +3,18 @@
 <head>
 <script src='//cdnt.netcoresmartech.com/smartechclient.js'></script> 
 <script>
-var payload={data:"test"}
+var payload={"data":"test"}
 smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96AFVJ0K9JQDP4GCKL24NBFB95S9G' );
 smartech('register', '3b0723298390fe6ee7a0637dbdac7c34');        
 smartech('identify', 'mobile');      
-smartech('dispatch','page browse',payload);
-smartech('dispatch','Add to Wishlist',payload);
-smartech('dispatch','Add to Wishlist',payload);
+smartech('dispatch','event_test1',payload);
+// smartech('dispatch','event_test1',payload);
+// smartech('dispatch','event_test1',payload);
 console.log("payload: "+payload);
+//Example
+smartech('dispatch', 'event_test1', {
+    'data': 'test'
+});
 </script>      
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
