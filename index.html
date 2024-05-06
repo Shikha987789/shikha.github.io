@@ -4,10 +4,12 @@
 <script src='//cdnt.netcoresmartech.com/smartechclient.js'></script> 
 <script>
 var payload={"data":"test"}
-smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96AFVJ0K9JQDP4GCKL24NBFB95S9G' );
-smartech('register', '3b0723298390fe6ee7a0637dbdac7c34');        
-smartech('identify', phone);     
-smartech('dispatch', 'page browse', []); 
+// smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96AFVJ0K9JQDP4GCKL24NBFB95S9G' );
+// smartech('register', '3b0723298390fe6ee7a0637dbdac7c34');        
+// smartech('identify', phone);     
+smartech('dispatch', 'page browse',  {
+    'URL': 'test'
+}); 
 
 
 </script>      
@@ -101,7 +103,9 @@ smartech('dispatch', 'page browse', []);
     // For demonstration purposes, we'll log the data to the console
     console.log('Email:', email);
     console.log('Phone:', phone);
-
+smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96AFVJ0K9JQDP4GCKL24NBFB95S9G' );
+smartech('register', '3b0723298390fe6ee7a0637dbdac7c34');        
+smartech('identify', phone);  
 smartech('dispatch', 'Login', {
     'email': email,
     'phone': phone
